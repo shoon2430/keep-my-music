@@ -1,15 +1,17 @@
-import subprocess  # 라이브러리
 import youtube_dl  # 라이브러리
 import os
 
-# choco install ffmpeg
+# 다운로드 경로
+output_dir = os.path.join('./download', '%(title)s.%(ext)s')
+
 def run():
     video_url = input("Please enter tho YouTube Video URL : ")
-    SAVE_PATH = "/".join(os.getcwd().split("/")[:3]) + "\Downloads\."
+
     video_info = youtube_dl.YoutubeDL().extract_info(url=video_url, download=False)
     filename = f"{video_info['id']}" + ".%(ext)s"
     options = {
-        "format": "bestaudio/best",
+        "format": "bestaudio/best", # 가장 좋은 화질로 선택(화질을 선택하여 다운로드 가능)
+        'outtmpl': output_dir,       # 다운로드 경로 설정
         "postprocessors": [
             {
                 "key": "FFmpegExtractAudio",
@@ -21,6 +23,7 @@ def run():
         "prefer_ffmpeg": True,
         "keepvideo": True,
     }
+    
     with youtube_dl.YoutubeDL(options) as ydl:
         info_dict = ydl.extract_info(video_info["webpage_url"], download=True)
         video_url = info_dict.get("url", None)
