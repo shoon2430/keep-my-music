@@ -62,13 +62,13 @@ python run.py
 
 실행 시 다음과 같이 콘솔에 다음과 같이 뜨게 되는데
 
-![실행화면](img\실행화면.png)
+![실행화면](https://github.com/shoon2430/keep-my-music/blob/master/img/실행화면.png)
 
 커서에 추출 하고 싶은 동영상의 주소를 넣어주면 된다.
 
-![결과](img\결과.png)
+![결과](https://github.com/shoon2430/keep-my-music/blob/master/img/결과.png)
 
 주소를 넣어 준 뒤 Enter를 누르게 되면 내가 지정한 위치에 mp3파일이 저장된것을 확인 할 수 있다.
 
-![파일저장결과](img\파일저장결과.png)
+![파일저장결과](https://github.com/shoon2430/keep-my-music/blob/master/img/파일저장결과.png)
 
