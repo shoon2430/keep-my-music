@@ -55,6 +55,8 @@ youtube_dl 예제코드 https://www.programcreek.com/python/example/98358/youtub
 
 clone받은 run.py파일을 실행시켜주면 된다.
 
+> 실행전에 download 폴더가 존재하지 않는다면 생성해주도록 하자
+
 ```sh
 # 현재 디렉토리에서
 python run.py
